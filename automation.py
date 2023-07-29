@@ -5,6 +5,9 @@ import time
 desktop_path = ('/Users/luanho/Desktop')
 photos_path = ('/Users/luanho/Desktop/Photos')
 
+if not os.path.exists(photos_path):
+    os.makedirs(photos_path)
+    
 # lists all files in desktop
 with os.scandir(desktop_path) as entries:
     for entry in entries:
